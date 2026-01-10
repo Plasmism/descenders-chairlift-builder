@@ -1,7 +1,7 @@
 # descenders-chairlift-builder
 **The most efficient way to build chairlifts in Unity.**
 
-To use, download **ChairliftCableBuilder.cs** and put it into your assets folder in the Unity project. Then create a folder titled exactly "Editor" and drag the file into there.
+To use, download **ChairliftCableBuilder.cs** and put it into your assets folder in the Unity project. Then create a folder titled exactly "Editor" and drag the file into there, after that on the top bar there should be a new tab titled "tools".
 
 <img width="398" height="680" alt="image" src="https://github.com/user-attachments/assets/47ecd36e-5ed1-4755-8871-482addf5238d" />
 
