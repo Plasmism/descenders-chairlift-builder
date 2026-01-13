@@ -1,10 +1,70 @@
 # descenders-chairlift-builder
+
 **The most efficient way to build chairlifts in Unity.**
 
-To use, download **ChairliftCableBuilder.cs** and put it into your assets folder in the Unity project. Then create a folder titled exactly "Editor" and drag the file into there, after that on the top bar there should be a new tab titled "tools".
+To get started, download **ChairliftCableBuilder.cs** and place it in your Unity project’s **Assets** folder.
+Create a folder named exactly **Editor**, then move the script into it. Once imported, a new **Tools** tab will appear in the top menu bar.
+
+---
 
 <img width="398" height="680" alt="image" src="https://github.com/user-attachments/assets/47ecd36e-5ed1-4755-8871-482addf5238d" />
 
-Create two line renderers, then drag them into the slots at the top for cable A and B. For wheel assemblies, those are the points the cables will connect to, so either select your wheel models in the prefab or create an invisible cube inside of the wheels. Add the wheel assemblies in order from your first tower to your last. For rollers I would keep the default settings. After selecting all wheel assemblies and putting them in order you can build cables, and then tweak the offset on the second cable to line it up however you want. For sag, I use 16 subdivisions and 1.5m, but you can do whatever your heart desires. For chairs, select a good prefab and drag it in. You do not need to edit the parents, as that is automatically done. Tweak the spacing, start offset, and chair offset to make it however you want. Finally, edit the last three options to make the chairs face correctly. You can build cables, generate the chairs only, or clear chairs with the last 3 options (building cables also automatically adds chairs.)
+**Requirements**
+- Unity LineRenderer components for cables
+- Wheel assemblies must contain MeshRenderers (visible or invisible)
+
+1. **Create the cables**
+
+   * Create **two Line Renderers**.
+   * Drag them into the slots at the top for **Cable A** and **Cable B**.
+
+2. **Set up wheel assemblies**
+
+   * Wheel assemblies define where the cables connect (rollers are detected by MeshRenderers under each assembly).
+   * Either:
+
+     * Select your wheel models directly in the prefab, **or**
+     * Create an invisible cube inside each wheel.
+   * Add the wheel assemblies **in order**, starting from the first tower and ending at the last.
+
+3. **Roller settings**
+
+   * By default, rollers are collected from MeshRenderers and sorted by local X, which works for most towers.
+
+4. **Build and align cables**
+
+   * Once all wheel assemblies are selected and ordered, **build the cables**.
+   * Adjust the **offset on the second cable** to align it as desired.
+   * For sag, a good starting point is:
+
+     * **16 subdivisions**
+     * **1.5 m sag**
+        * Sag uses a simple parabolic approximation, not a physical catenary.
+   * Feel free to adjust these values to your preference.
+
+5. **Add chairs**
+
+   * Choose a suitable chair prefab and drag it in.
+   * You do **not** need to edit the parents, this is handled automatically.
+   * Adjust:
+
+     * Chair spacing
+     * Start offset
+     * Chair offset
+
+6. **Finalize chair orientation**
+
+   * Use the **last three options** to make the chairs face the correct direction.
+
+7. **Utility options**
+
+   * You can:
+
+     * Build cables (this also generates chairs)
+     * Generate chairs only
+     * Clear chairs
+
+---
+
 
 <img width="1497" height="971" alt="image" src="https://github.com/user-attachments/assets/caec6bcf-88d1-41db-b3d9-0ba75fd3fc01" />
