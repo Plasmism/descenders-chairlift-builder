@@ -48,7 +48,7 @@ public class ChairliftCableWindow : EditorWindow
 
     private enum RollerSortMode { LocalX, LocalY, LocalZ }
 
-    [MenuItem("tools/chairlift cable builder")]
+    [MenuItem("Tools/Chairlift Builder")]
     public static void Open()
     {
         GetWindow<ChairliftCableWindow>("chairlift cable");
